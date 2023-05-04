@@ -1,4 +1,4 @@
-package com.example.developer_ability_test.ui.theme
+package developer_ability_test.ui.theme
 
 import android.app.Activity
 import android.os.Build

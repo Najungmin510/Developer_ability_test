@@ -13,10 +13,10 @@
         android:theme="@style/Theme.Developer_ability_test"
         tools:targetApi="31">
         <activity
-            android:name="src.Login_view"
+            android:name="src.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="developer_ability_test.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Developer_ability_test">
