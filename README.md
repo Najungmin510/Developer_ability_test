@@ -6,10 +6,35 @@
 그래서 현재 디자인 하고 있던 애플리케이션의 이미지대로 디자인을 재구성해보았습니다.
 > 기간 : 2023 4/30 ~ 2023 5/30  
 > 역량 테스트를 위한 1인 개발<br>  
-> ⚒️사용한 기술 스택 ⚙️ : Android studio, Xd, JsonPlaceHolder
+> ⚒️사용한 기술 스택 ⚙️ : Android studio, Xd
+
+## 목차   
+1. 애플리케이션 설치 및 실행 방법
+2. 기능 소개   
+3. 사용한 라이브러리   
+4. 참고 사이트      
 
 
-## 기능 소개
+## 1. 애플리케이션 설치 및 실행 방법
+
+## 2. 기능 소개
 1. 로그인
 2. 게시글 및 댓글 작성
 3. 할 일 체크리스트
+
+## 3. 사용한 라이브러리   
+> Android Studio Jetpack   
+> Kotlin data class File from Json   
+> Retrofit2   
+> 
+
+## 4. 참고 사이트
+> Retrofit & JsonplaceHolder 참고 사이트      
+> https://velog.io/@leeyjwinter/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-Retrofit-%EC%B4%88%EA%B8%B0%EC%84%A4%EC%A0%95%EA%B3%BC-%EC%8B%A4%ED%96%89   
+> https://codingpracticing.tistory.com/223   
+> https://jsonplaceholder.typicode.com/   
+
+> material3 error 해결 참고 사이트   
+> https://stackoverflow.com/questions/53476115/error-illegalargumentexception-the-style-on-this-component-requires-your-app   
+> https://enant.tistory.com/7   
+> 
