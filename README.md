@@ -6,7 +6,7 @@
 그래서 현재 디자인 하고 있던 애플리케이션의 이미지대로 디자인을 재구성해보았습니다.
 > 기간 : 2023 4/30 ~ 2023 5/30  
 > 역량 테스트를 위한 1인 개발<br>  
-> ⚒️사용한 기술 스택 ⚙️ : Android studio, Xd, SpringBoot, FireBase   
+> ⚒️사용한 기술 스택 ⚙️ : Android studio, Xd, JsonPlaceHolder
 
 
 ## 기능 소개
