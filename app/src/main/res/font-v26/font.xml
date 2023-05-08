@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/appleSDGothicNeoB"/>
+
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/appleSDGothicNeoEB"/>
+
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/appleSDGothicNeoH"/>
+
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/appleSDGothicNeoL"/>
+
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/appleSDGothicNeoM"/>
+
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/appleSDGothicNeoR"/>
+
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/appleSDGothicNeoSB"/>
+
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/appleSDGothicNeoT"/>
+
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/appleSDGothicNeoUL"/>
+
+</font-family>
