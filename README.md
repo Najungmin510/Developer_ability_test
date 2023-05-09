@@ -26,7 +26,7 @@
 > Android Studio Jetpack   
 > Kotlin data class File from Json   
 > Retrofit2   
-> 
+> CookieJar
 
 ## 4. 참고 사이트
 > Retrofit & JsonplaceHolder 참고 사이트      
@@ -40,4 +40,8 @@
 > material3 error 해결 참고 사이트   
 > https://stackoverflow.com/questions/53476115/error-illegalargumentexception-the-style-on-this-component-requires-your-app   
 > https://enant.tistory.com/7   
-> 
+
+> 로그인 세션 유지 방법 참고 사이트   
+> https://gun0912.tistory.com/50   
+> https://easy-coding.tistory.com/54   
+> https://github.com/square/okhttp/tree/master
