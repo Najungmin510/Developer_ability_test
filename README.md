@@ -44,4 +44,5 @@
 > 로그인 세션 유지 방법 참고 사이트   
 > https://gun0912.tistory.com/50   
 > https://easy-coding.tistory.com/54   
-> https://github.com/square/okhttp/tree/master
+> https://github.com/square/okhttp/tree/master   
+> https://android-arsenal.com/details/1/8000   
