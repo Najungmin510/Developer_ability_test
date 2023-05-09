@@ -34,6 +34,8 @@
 > https://codingpracticing.tistory.com/223   
 > https://jsonplaceholder.typicode.com/   
 > https://zzandoli.tistory.com/48
+> http://devflow.github.io/retrofit-kr/
+> https://jslee-tech.tistory.com/18
 
 > material3 error 해결 참고 사이트   
 > https://stackoverflow.com/questions/53476115/error-illegalargumentexception-the-style-on-this-component-requires-your-app   
