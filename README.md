@@ -33,9 +33,9 @@
 > https://velog.io/@leeyjwinter/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-Retrofit-%EC%B4%88%EA%B8%B0%EC%84%A4%EC%A0%95%EA%B3%BC-%EC%8B%A4%ED%96%89   
 > https://codingpracticing.tistory.com/223   
 > https://jsonplaceholder.typicode.com/   
-> https://zzandoli.tistory.com/48
-> http://devflow.github.io/retrofit-kr/
-> https://jslee-tech.tistory.com/18
+> https://zzandoli.tistory.com/48   
+> http://devflow.github.io/retrofit-kr/   
+> https://jslee-tech.tistory.com/18   
 
 > material3 error 해결 참고 사이트   
 > https://stackoverflow.com/questions/53476115/error-illegalargumentexception-the-style-on-this-component-requires-your-app   
