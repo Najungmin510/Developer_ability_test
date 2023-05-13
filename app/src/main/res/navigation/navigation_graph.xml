@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/notice_fragment">
+<!--startDestination은 시작할 프래그먼트를 지정해주는 거임-->
+    <fragment
+        android:id="@+id/notice_fragment"
+        android:name="com.example.developer_ability_test.fragments.notice_fragment"
+        android:label="fragment_notice"
+        tools:layout="@layout/fragment_notice" />
+    <fragment
+        android:id="@+id/TODO_fragment"
+        android:name="com.example.developer_ability_test.fragments.TODO_fragment"
+        android:label="fragment_todo"
+        tools:layout="@layout/fragment_todo" />
+</navigation>

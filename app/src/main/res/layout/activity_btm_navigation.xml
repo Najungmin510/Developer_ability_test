@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".code.btm_navigation">
+
+    <!--fragment container-->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_host"
+        android:layout_width="match_parent"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/navigation_graph"
+        />
+    <!-- ▲ 네비게이션에서 기본적으로 호출하는 화면으로 설정
+    navGraph는 네비게이션 그래프에서 지정한대로 움직이라고 하는 거임-->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btm_navi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/btm_navi" />
+
+</LinearLayout>

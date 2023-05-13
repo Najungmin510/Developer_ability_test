@@ -3,12 +3,12 @@
     <item
         android:title="게시판"
         android:icon="@drawable/write_icon_1"
-        android:id="@+id/test"
+        android:id="@+id/notice"
         />
 
     <item
         android:title="할일"
         android:icon="@drawable/ic_todo"
-        android:id="@+id/test2"
+        android:id="@+id/todo"
         />
 </menu>

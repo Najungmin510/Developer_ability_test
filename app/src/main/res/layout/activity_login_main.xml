@@ -73,38 +73,29 @@
             android:layout_height="44dp"
             android:background="#00ffffff"
             android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/btn_login"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/input_circle"
-            tools:layout_editor_absoluteY="16dp" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:srcCompat="@drawable/input_circle" />
 
-        <ImageView
-            android:id="@+id/imageView"
+        <ImageButton
+            android:id="@+id/btn_login"
             android:layout_width="334dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
             android:background="#00ffffff"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            app:srcCompat="@drawable/input_circle" />
-
-        <ImageButton
-            android:id="@+id/login"
-            android:layout_width="334dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="40dp"
-            android:background="#00ffffff"
-            android:scaleType="fitXY"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:srcCompat="@drawable/login"
-            tools:layout_editor_absoluteX="0dp" />
+            app:srcCompat="@drawable/login" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/et_user_id"
             android:layout_width="259dp"
             android:layout_height="39dp"
             android:background="#00ffffff"
@@ -117,22 +108,6 @@
             app:layout_constraintStart_toStartOf="@+id/imageView2"
             app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
-        <EditText
-            android:id="@+id/editTextText2"
-            android:layout_width="259dp"
-            android:layout_height="39dp"
-            android:background="#00ffffff"
-            android:ems="10"
-            android:fontFamily="@font/appleSDGothicNeoR"
-            android:hint="비밀번호"
-            android:inputType="text"
-            app:layout_constraintBottom_toTopOf="@+id/imageView"
-            app:layout_constraintEnd_toStartOf="@+id/imageView"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.5" />
-
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
@@ -141,20 +116,35 @@
             android:text="로그인"
             android:textColor="#FFFFFF"
             android:textSize="22dp"
-            app:layout_constraintBottom_toTopOf="@+id/login"
-            app:layout_constraintEnd_toStartOf="@+id/login"
+            app:layout_constraintBottom_toTopOf="@+id/btn_login"
+            app:layout_constraintEnd_toStartOf="@+id/btn_login"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/login"
-            app:layout_constraintTop_toBottomOf="@+id/login"
+            app:layout_constraintStart_toEndOf="@+id/btn_login"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login"
             app:layout_constraintVertical_bias="0.5" />
 
-
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
             android:text="로그인 상태 유지"
-            tools:layout_editor_absoluteX="176dp"
-            tools:layout_editor_absoluteY="224dp" />
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton"
+            app:layout_constraintHorizontal_bias="0.994"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="#00ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login"
+            app:srcCompat="@drawable/check_circle_no_click" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

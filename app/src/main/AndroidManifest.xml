@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,60 +15,24 @@
         android:theme="@style/Theme.Developer_ability_test"
         tools:targetApi="31">
         <activity
+            android:name=".code.btm_navigation"
+            android:exported="false" />
+        <activity
             android:name=".code.Notice_write_Acticity"
             android:exported="false" />
         <activity
             android:name=".code.Login_MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".code.Notice_Activity_Start_Main"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".btm_navigation"
-            android:exported="false"
-            android:label="@string/title_activity_btm_navigation"
-            android:theme="@style/Theme.Developer_ability_test" />
-        <activity
-            android:name=".Navi_MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".btm_navigation_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".ToDo_List_Add"
-            android:exported="false" />
-        <activity
-            android:name=".ToDo_List_Main"
-            android:exported="false" />
-        <activity
-            android:name=".NoticeBoard_Detail"
-            android:exported="false" />
-        <activity
-            android:name=".NoticeBoard_Write"
-            android:exported="false" />
-        <activity
-            android:name=".NoticeBoard_Main"
-            android:exported="false" />
-        <activity
-            android:name=".Login_Start_Activity"
-            android:exported="false" />
-        <activity
-            android:name="src.MainActivity"
-            android:exported="false" />
-        <activity
-            android:name="developer_ability_test.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.Developer_ability_test">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".code.Notice_Activity_Start_Main"
+            android:exported="false" />
     </application>
 
 </manifest>
