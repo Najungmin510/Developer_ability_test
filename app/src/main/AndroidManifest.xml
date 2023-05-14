@@ -38,9 +38,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".code.Notice_Activity_Start_Main"
-            android:exported="false" />
     </application>
 
 </manifest>
