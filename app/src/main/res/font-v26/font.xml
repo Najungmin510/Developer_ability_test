@@ -3,38 +3,38 @@
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/appleSDGothicNeoB"/>
+        android:font="@font/applesdgothicneo_b"/>
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/appleSDGothicNeoEB"/>
+        android:font="@font/applesdgothicneoe_b"/>
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/appleSDGothicNeoH"/>
+        android:font="@font/applesdgothicneo_h"/>
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/appleSDGothicNeoL"/>
+        android:font="@font/applesdgothicneo_l"/>
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/appleSDGothicNeoM"/>
+        android:font="@font/applesdgothicneo_m"/>
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/appleSDGothicNeoR"/>
+        android:font="@font/applesdgothicneo_r"/>
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/appleSDGothicNeoSB"/>
+        android:font="@font/applesdgothicneo_sb"/>
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/appleSDGothicNeoT"/>
+        android:font="@font/applesdgothicneo_t"/>
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/appleSDGothicNeoUL"/>
+        android:font="@font/applesdgothicneo_ul"/>
 
 </font-family>

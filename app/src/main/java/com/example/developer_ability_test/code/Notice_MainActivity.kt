@@ -10,8 +10,7 @@ import androidx.core.content.IntentCompat.getParcelableExtra
 import com.example.developer_ability_test.R
 import com.example.developer_ability_test.databinding.ActivityNoticeMainBinding
 import com.example.developer_ability_test.retrofit_login.Login_Success_User
-import kotlinx.android.synthetic.main.activity_notice_main.view.test_id
-import kotlinx.android.synthetic.main.activity_notice_main.view.test_name
+
 
 /*로그인 한 사용자의 객체를 로그인 activity에서 받아와서, 로그인 한 사용자의 id == 게시글의 userid 일치하나 확인
 일치 한다면, 자신이라는 것을 알려주어야 함.

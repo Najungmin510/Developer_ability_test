@@ -37,34 +37,41 @@ class Login_MainActivity : AppCompatActivity() {
             .get_Login_RetrofitObject()
             .create(LoginService::class.java)
 
-        val responseLiveData : LiveData<Response<Login_Users>> = liveData{
-            val response =retService.getUser() //사용자에 대한 데이터를 가져오고
+        val responseLiveData: LiveData<Response<Login_Users>> = liveData {
+            val response = retService.getUser() //사용자에 대한 데이터를 가져오고
             emit(response)
         }
 
-        responseLiveData.observe(this, Observer {
-            val userList = it.body()?.listIterator()
-            if(userList != null){ //비어있지 않다면 회원 목록에 있다는 것, 그럼 다음 화면으로 넘어가도 ok
-                while(userList.hasNext()){
-                    val item = userList.next()
+        binding.btnLogin.setOnClickListener { //버튼을 클릭했을 때
+            responseLiveData.observe(this, Observer {
+                val userList = it.body()?.listIterator()
 
-                    if(item.name == userName){ //회원 목록중에 있다면 return and break
-                        Log.d("로그인 시도 test name", item.name)
-                        Log.d("로그인 시도 test id", item.id.toString()) //데이터 확인용 로그
+                if (userList != null) { //비어있지 않다면 회원 목록에 있다는 것, 그럼 다음 화면으로 넘어가도 ok
+                    while (userList.hasNext()) {
+                        val item = userList.next()
 
-                        val intent : Intent = Intent(this, Notice_MainActivity::class.java)
-                        intent.putExtra("LoginUser", Login_Success_User(item.name, item.id)) //로그인한 사용자 객체를 넘겨주기
-                        startActivity(intent)
+                        if (item.name == userName) { //회원 목록중에 있다면 return and break
+                            Log.d("로그인 시도 test name", item.name)
+                            Log.d("로그인 시도 test id", item.id.toString()) //데이터 확인용 로그
 
-                        Toast.makeText(this,"로그인 하였습니다.", Toast.LENGTH_SHORT).show()
+                            val intent: Intent = Intent(this, Notice_MainActivity::class.java)
+                            intent.putExtra(
+                                "LoginUser",
+                                Login_Success_User(item.name, item.id)
+                            ) //로그인한 사용자 객체를 넘겨주기
+                            startActivity(intent)
 
-                        break //회원은 중복되지 않으니 보낸 후 바로 탈출하면 됨
+                            Toast.makeText(this, "로그인 하였습니다.", Toast.LENGTH_SHORT).show()
+
+                            break //회원은 중복되지 않으니 보낸 후 바로 탈출하면 됨
+                        }
                     }
+                } else { //null일 경우 회원목록에 없다는 것
+                    Toast.makeText(this, "존재하지 않는 아이디입니다.", Toast.LENGTH_SHORT).show()
                 }
-            } else{ //null일 경우 회원목록에 없다는 것
-                Toast.makeText(this,"존재하지 않는 아이디입니다.",Toast.LENGTH_SHORT).show()
-            }
-        })
+            })
+        } //Listener
 
-        }
-    }
+    } // override
+
+}//Main
