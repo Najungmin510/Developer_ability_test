@@ -11,6 +11,7 @@ import androidx.lifecycle.liveData
 import com.example.developer_ability_test.InterfaceFile.LoginService
 import com.example.developer_ability_test.Retrofit2.RetrofitInstance
 import com.example.developer_ability_test.databinding.ActivityLoginMainBinding
+import com.example.developer_ability_test.fragments.TODO_fragment
 import com.example.developer_ability_test.fragments.notice_fragment
 import com.example.developer_ability_test.retrofit_login.LoginInform
 import com.example.developer_ability_test.retrofit_login.Users
@@ -44,6 +45,7 @@ class Login_MainActivity : AppCompatActivity() {
         val btn = binding.btnLogin //로그인 버튼 가져오기
 
         btn.setOnClickListener{ //버튼 클릭 시
+
             responseLiveData.observe(this, Observer {
                 val UserList = it.body()
                 //Log.d("ID / 사용자 입력 아이디",userName.toString())
@@ -54,26 +56,35 @@ class Login_MainActivity : AppCompatActivity() {
 
                 if (UserList != null) {
                     for(i in 0 until UserList.size){ //사용자 적어서 그냥 다 돌아버릴거임
-                        if(userName.toString() == UserList.get(i).name){ //사용자가 입력한 값과 같은게 목록에 있다면 회원
+                        if(userName.toString() == UserList.get(i).name){ //입력한 값과 같은게 목록에 있다면 회원
                             check = true;
                             login_name = UserList.get(i).name
                             login_id = UserList.get(i).id
 
-                            //Log.d("ID/ 찾은 사용자 이름", login_name)
-                            //Log.d("ID/ 찾은 사용자 아이디", login_id.toString())
+                            Log.d("ID/ 찾은 사용자 이름", login_name)
+                            Log.d("ID/ 찾은 사용자 아이디", login_id.toString())
                         }
                     }
                 } //No Problem
 
-                if(check == true){ //로그인, 로그인 한 사용자 값 데이터 클래스에 저장해서 꺼내쓰도록 할 것
-                    val intent = Intent(this, notice_fragment::class.java)
+                if(check == true){ //회원 여부 확인
+                    ///val intentNotice = Intent(this, notice_fragment::class.java) //fragment에서 동작을 하기에 데이터는 fragment로 보내줌
+                    //val result = LoginInform(login_name, login_id) //일단 데이터 넘겨줄 intent 하나
+                    //intentNotice.putExtra("LoginDataInNotice",result)
 
-                    val result = LoginInform(login_name, login_id)
-                    intent.putExtra("Login",result)
-                    Toast.makeText(this,"로그인 하였습니다.",Toast.LENGTH_SHORT).show()
+                    //val intentTodo = Intent(this, TODO_fragment::class.java)
+                    //intentTodo.putExtra("LoginDataInTodo",result)
+
+                    //startActivity(intentNotice)
+                   // startActivity(intentTodo)
+
+                    val intentContent = Intent(this, btm_navigation::class.java) //작동은 main에서 되기때문에 사용자에게 보여지는 화면은 main으로 이동
+
+                    Toast.makeText(this,"로그인 하였습니다.",Toast.LENGTH_LONG).show()
+                    startActivity(intentContent)
 
                 } else{ //아니라면 회원 x, 로그인 불가
-                    Toast.makeText(this,"해당 아이디가 존재하지 않습니다.",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,"해당 아이디가 존재하지 않습니다.",Toast.LENGTH_LONG).show()
 
                 }
             })

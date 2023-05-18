@@ -9,7 +9,7 @@ import com.example.developer_ability_test.databinding.ActivityBtmNavigationBindi
 
 class btm_navigation : AppCompatActivity() {
 
-    private lateinit var mBinding : ActivityBtmNavigationBinding
+    private lateinit var mBinding : ActivityBtmNavigationBinding //바텀 네비게이션과 연결
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

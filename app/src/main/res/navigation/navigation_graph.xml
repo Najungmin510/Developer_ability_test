@@ -9,10 +9,18 @@
         android:id="@+id/notice_fragment"
         android:name="com.example.developer_ability_test.fragments.notice_fragment"
         android:label="fragment_notice"
-        tools:layout="@layout/fragment_notice" />
+        tools:layout="@layout/fragment_notice" >
+        <action
+            android:id="@+id/action_notice_fragment_to_TODO_fragment"
+            app:destination="@id/TODO_fragment" />
+    </fragment>
     <fragment
         android:id="@+id/TODO_fragment"
         android:name="com.example.developer_ability_test.fragments.TODO_fragment"
         android:label="fragment_todo"
-        tools:layout="@layout/fragment_todo" />
+        tools:layout="@layout/fragment_todo" >
+        <action
+            android:id="@+id/action_TODO_fragment_to_notice_fragment"
+            app:destination="@id/notice_fragment" />
+    </fragment>
 </navigation>

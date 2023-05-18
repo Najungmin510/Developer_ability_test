@@ -10,16 +10,15 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="442dp"
-        android:layout_height="138dp"
-        android:layout_marginBottom="630dp"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
         android:background="#00ffffff"
         android:scaleType="fitXY"
-        android:src="@drawable/title"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.324"
-        tools:layout_editor_absoluteX="-16dp" />
+        android:src="@drawable/title_no_shadow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
@@ -27,12 +26,34 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/applesdgothicneo_b"
         android:text="게시판"
-        android:textColor="@color/white"
-        android:textSize="30dp"
+        android:textColor="#FFFFFF"
+        android:textSize="27dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.509" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.53" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="390dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
