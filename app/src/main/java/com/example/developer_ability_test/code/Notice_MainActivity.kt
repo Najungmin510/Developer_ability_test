@@ -9,7 +9,7 @@ import androidx.annotation.RequiresApi
 import androidx.core.content.IntentCompat.getParcelableExtra
 import com.example.developer_ability_test.R
 import com.example.developer_ability_test.databinding.ActivityNoticeMainBinding
-import com.example.developer_ability_test.retrofit_login.Login_Success_User
+
 
 
 /*로그인 한 사용자의 객체를 로그인 activity에서 받아와서, 로그인 한 사용자의 id == 게시글의 userid 일치하나 확인
@@ -28,18 +28,6 @@ class Notice_MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notice_main)
         binding = ActivityNoticeMainBinding.inflate(layoutInflater)
-        val view = binding.root
-
-        val intent : Intent = intent
-        val Logindata = intent.getParcelableExtra<Login_Success_User>("LoginUser", Login_Success_User::class.java)
-
-
-        if (Logindata != null) {
-            binding.testName.text = Logindata.Success_user_name //값이 잘 가져와지나 테스트 할거임
-            binding.testId.text = Logindata.Success_user_id.toString()
-        } else{
-            Toast.makeText(this,"실패", Toast.LENGTH_SHORT).show()
-        }
 
 
     }
