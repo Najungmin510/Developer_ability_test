@@ -110,4 +110,5 @@ dependencies {
     //CookieJar
     implementation "com.squareup.okhttp3:okhttp-urlconnection:4.10.0"
 
+    implementation "androidx.cardview:cardview:1.0.0"
 }

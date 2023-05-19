@@ -12,8 +12,6 @@ class notice_fragment :Fragment() {
     private var mBinding : FragmentNoticeBinding?= null//member 변수 바인딩
 
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

@@ -63,21 +63,21 @@ class Login_MainActivity : AppCompatActivity() {
 
                             Log.d("ID/ 찾은 사용자 이름", login_name)
                             Log.d("ID/ 찾은 사용자 아이디", login_id.toString())
+
+                            val intentNotice = Intent(this, notice_fragment::class.java) //fragment에서 동작을 하기에 데이터는 fragment로 보내줌
+                            val result = LoginInform(login_name, login_id) //일단 데이터 넘겨줄 intent 하나
+                            intentNotice.putExtra("LoginDataInNotice",result)
+
+                            //val intentTodo = Intent(this, TODO_fragment::class.java)
+                            //intentTodo.putExtra("LoginDataInTodo",result)
+
+                            startActivity(intentNotice)
+                           // startActivity(intentTodo)
                         }
                     }
                 } //No Problem
 
                 if(check == true){ //회원 여부 확인
-                    ///val intentNotice = Intent(this, notice_fragment::class.java) //fragment에서 동작을 하기에 데이터는 fragment로 보내줌
-                    //val result = LoginInform(login_name, login_id) //일단 데이터 넘겨줄 intent 하나
-                    //intentNotice.putExtra("LoginDataInNotice",result)
-
-                    //val intentTodo = Intent(this, TODO_fragment::class.java)
-                    //intentTodo.putExtra("LoginDataInTodo",result)
-
-                    //startActivity(intentNotice)
-                   // startActivity(intentTodo)
-
                     val intentContent = Intent(this, btm_navigation::class.java) //작동은 main에서 되기때문에 사용자에게 보여지는 화면은 main으로 이동
 
                     Toast.makeText(this,"로그인 하였습니다.",Toast.LENGTH_LONG).show()
