@@ -8,13 +8,12 @@ import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.liveData
-import com.example.developer_ability_test.InterfaceFile.LoginService
+import com.example.developer_ability_test.InterfaceFile.RetrofitService
 import com.example.developer_ability_test.Retrofit2.RetrofitInstance
 import com.example.developer_ability_test.databinding.ActivityLoginMainBinding
-import com.example.developer_ability_test.fragments.TODO_fragment
 import com.example.developer_ability_test.fragments.notice_fragment
-import com.example.developer_ability_test.retrofit_login.LoginInform
-import com.example.developer_ability_test.retrofit_login.Users
+import com.example.developer_ability_test.retrofit_DTO.LoginInform
+import com.example.developer_ability_test.retrofit_DTO.Users
 import retrofit2.Response
 
 /*
@@ -34,7 +33,7 @@ class Login_MainActivity : AppCompatActivity() {
 
         val retService = RetrofitInstance
             .getRetrofitInstance()
-            .create(LoginService::class.java)
+            .create(RetrofitService::class.java)
 
         val responseLiveData : LiveData<Response<Users>> = liveData {
             val response = retService.getUsers()
