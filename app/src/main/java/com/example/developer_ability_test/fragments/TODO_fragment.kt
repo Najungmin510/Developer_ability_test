@@ -19,7 +19,6 @@ class TODO_fragment :Fragment(), View.OnClickListener{
         val binding = FragmentTodoBinding.inflate(inflater, container, false)
         mBinding = binding
 
-
         return mBinding?.root
     }
 
