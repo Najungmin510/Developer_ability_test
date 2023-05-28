@@ -1,5 +1,6 @@
 package com.example.developer_ability_test.code
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -32,9 +33,10 @@ parcelize 참고  : https://yuuj.tistory.com/211 https://ducksever.tistory.com/3
 > 화면전환 intent, 데이터 넘기기 bundle 사용
 */
 
-class Login_MainActivity : AppCompatActivity() {
+class Login_MainActivity : AppCompatActivity(), notice_fragment.OnNoticeAdapterListener {
     private lateinit var binding: ActivityLoginMainBinding //결합 클래스 호출
     private lateinit var viewModel : MainViewModel
+    public lateinit var mContext : Context
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,8 +57,11 @@ class Login_MainActivity : AppCompatActivity() {
                     //Log.d("테스트", it.name)
                     if(it.name == ""){
                         Toast.makeText(this,"회원 목록에 존재하지 않습니다.",Toast.LENGTH_SHORT).show()
+                        mContext = this;
 
                     } else {
+
+
                         val intent = Intent(this,btm_navigation::class.java)
                         Toast.makeText(this,"로그인 하였습니다.",Toast.LENGTH_SHORT).show()
                         startActivity(intent)
@@ -76,4 +81,11 @@ class Login_MainActivity : AppCompatActivity() {
             }
         }
    }// override
+
+
+    override fun onAttachFragment(fragment: Fragment){
+        if(fragment is notice_fragment){
+            fragment.setOnNoticeAdapterListener(this)
+        }
+    }
 }

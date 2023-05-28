@@ -21,10 +21,10 @@ import com.example.developer_ability_test.retrofit_DTO.UsersItem
 참고한게 R.layout 써서 헷갈릴까봐 똑같이 하긴 했는데, viewBinding으로 하는것에 익숙해지기 << 이게 더 효율적이고 편리함
 * retrofit2 사용*/
 
-/*
-class NoticeRecyclerAdapter(private val context : Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+class NoticeRecyclerAdapter(val context : Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
     private var List = emptyList<PostsItem>()
+
     lateinit var UserInform : Login_MainActivity
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val view : View?
@@ -57,13 +57,14 @@ class NoticeRecyclerAdapter(private val context : Context) : RecyclerView.Adapte
         when(List[position].type){
             NoLogin_Notice_type -> {
                 (holder as NoticeRecyclerAdapter_no_Login).bind(List[position])
+
             }
         }
     }
 
     inner class NoticeRecyclerAdapter_no_Login(view : View) : RecyclerView.ViewHolder(view){
 
-        fun bind(item: PostsItem){
+        fun bind(item: PostsItem) {
 
         }
     }
@@ -73,8 +74,9 @@ class NoticeRecyclerAdapter(private val context : Context) : RecyclerView.Adapte
     }
 
 
+
 }
-*/
+
 
 
 
