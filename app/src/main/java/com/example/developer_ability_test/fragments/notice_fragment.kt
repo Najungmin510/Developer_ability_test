@@ -1,7 +1,7 @@
 package com.example.developer_ability_test.fragments
 
-import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,6 +16,7 @@ import com.example.developer_ability_test.Repository.Repository
 import com.example.developer_ability_test.Retrofit2.RetrofitInstance
 import com.example.developer_ability_test.ViewModel.MainViewModelFactory
 import com.example.developer_ability_test.code.Login_MainActivity
+import com.example.developer_ability_test.code.btm_navigation
 import com.example.developer_ability_test.databinding.FragmentNoticeBinding
 import com.example.developer_ability_test.retrofit_DTO.Posts
 import retrofit2.Response
@@ -23,7 +24,6 @@ import retrofit2.Response
 class notice_fragment :Fragment() {
 
     private var mBinding : FragmentNoticeBinding?= null//member 변수 바인드
-    internal lateinit var callback: OnNoticeAdapterListener
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,7 +33,8 @@ class notice_fragment :Fragment() {
     ): View? {
         val binding = FragmentNoticeBinding.inflate(inflater, container, false)
         mBinding = binding
-
+        val a = (activity as btm_navigation).redata()
+        Log.d("check",a)
         return mBinding?.root
     }
 
@@ -46,17 +47,6 @@ class notice_fragment :Fragment() {
     override fun onDestroyView() {
         mBinding = null; //사용하지 않는다면 이 뷰 메모리 날려버리기
         super.onDestroyView()
-    }
-
-
-
-
-    fun setOnNoticeAdapterListener(callback : OnNoticeAdapterListener){
-        this.callback = callback
-    }
-
-    interface OnNoticeAdapterListener{ // 도대체 이게 의미하는게 뭐지???
-        fun onUserSelected(position : Int)
     }
 
 

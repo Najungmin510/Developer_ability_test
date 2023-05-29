@@ -20,11 +20,7 @@ import com.example.developer_ability_test.Retrofit2.RetrofitInstance
 import com.example.developer_ability_test.ViewModel.MainViewModel
 import com.example.developer_ability_test.ViewModel.MainViewModelFactory
 import com.example.developer_ability_test.databinding.ActivityLoginMainBinding
-import com.example.developer_ability_test.fragments.notice_fragment
-import com.example.developer_ability_test.retrofit_DTO.PostsItem
-import com.example.developer_ability_test.retrofit_DTO.Users
-import com.example.developer_ability_test.retrofit_DTO.UsersItem
-import retrofit2.Response
+
 
 /*
 parcelize 참고  : https://yuuj.tistory.com/211 https://ducksever.tistory.com/31
@@ -33,10 +29,9 @@ parcelize 참고  : https://yuuj.tistory.com/211 https://ducksever.tistory.com/3
 > 화면전환 intent, 데이터 넘기기 bundle 사용
 */
 
-class Login_MainActivity : AppCompatActivity(), notice_fragment.OnNoticeAdapterListener {
+class Login_MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginMainBinding //결합 클래스 호출
     private lateinit var viewModel : MainViewModel
-    public lateinit var mContext : Context
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,16 +50,16 @@ class Login_MainActivity : AppCompatActivity(), notice_fragment.OnNoticeAdapterL
             if(it.isSuccessful){
                 it.body()?.forEach{
                     //Log.d("테스트", it.name)
-                    if(it.name == ""){
-                        Toast.makeText(this,"회원 목록에 존재하지 않습니다.",Toast.LENGTH_SHORT).show()
-                        mContext = this;
-
-                    } else {
-
-
-                        val intent = Intent(this,btm_navigation::class.java)
+                    if(it.name == userName){
+                        val intent = Intent(this,btm_navigation::class.java) //여기로 데이터 넘겨주고
+                        intent.putExtra("LoginUserName",userName) //fragment에서 btm navigation에 접근해 데이터 가져오기
+                        intent.putExtra("LoginUserId",it.id)
                         Toast.makeText(this,"로그인 하였습니다.",Toast.LENGTH_SHORT).show()
+
                         startActivity(intent)
+
+                    } else if(it.name != userName) {
+                        Toast.makeText(this,"회원 목록에 존재하지 않습니다.",Toast.LENGTH_SHORT).show()
                     }
                 }
             } else{
@@ -82,10 +77,8 @@ class Login_MainActivity : AppCompatActivity(), notice_fragment.OnNoticeAdapterL
         }
    }// override
 
+    //??? 그냥 데이터 넘겨주고, btm_navigation에서 그 값 참고만 하면 되는거아님....? 왜 이렇게 고민했지???
 
-    override fun onAttachFragment(fragment: Fragment){
-        if(fragment is notice_fragment){
-            fragment.setOnNoticeAdapterListener(this)
-        }
-    }
+
+
 }
