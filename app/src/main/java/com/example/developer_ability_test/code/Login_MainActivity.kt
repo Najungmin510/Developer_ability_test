@@ -13,7 +13,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.liveData
 import androidx.navigation.findNavController
-import com.example.developer_ability_test.InterfaceFile.RetrofitService
 import com.example.developer_ability_test.R
 import com.example.developer_ability_test.Repository.Repository
 import com.example.developer_ability_test.Retrofit2.RetrofitInstance
@@ -58,8 +57,8 @@ class Login_MainActivity : AppCompatActivity() {
 
                         startActivity(intent)
 
-                    } else if(it.name != userName) {
-                        Toast.makeText(this,"회원 목록에 존재하지 않습니다.",Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(this,"존재하지 않는 아이디입니다.",Toast.LENGTH_SHORT).show()
                     }
                 }
             } else{
@@ -76,9 +75,4 @@ class Login_MainActivity : AppCompatActivity() {
             }
         }
    }// override
-
-    //??? 그냥 데이터 넘겨주고, btm_navigation에서 그 값 참고만 하면 되는거아님....? 왜 이렇게 고민했지???
-
-
-
 }

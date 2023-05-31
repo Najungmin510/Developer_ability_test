@@ -11,8 +11,9 @@ import com.example.developer_ability_test.databinding.ActivityBtmNavigationBindi
 class btm_navigation : AppCompatActivity() {
 
     private lateinit var mBinding : ActivityBtmNavigationBinding //바텀 네비게이션과 연결
-    var data = ""
-    var data2 = 0
+    var Username = "" //로그인한 사용자의 이름
+    var Userid = 0 //로그인한 사용자의 id
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -29,16 +30,22 @@ class btm_navigation : AppCompatActivity() {
 
 
         //데이터 처리 구간
-        data = intent.getStringExtra("LoginUserName").toString()
-        data2 = intent.getIntExtra("LoginUserId",0)
+        Username = intent.getStringExtra("LoginUserName").toString()
+        Userid = intent.getIntExtra("LoginUserId",0)
 
-        Log.d("myidcheck",data)
-        Log.d("myidcheck", data2.toString()) //데이터 잘 넘어오는거 확인 완료
+        Log.d("myidcheck",Username)
+        Log.d("myidcheck", Userid.toString()) //데이터 잘 넘어오는거 확인 완료
 
 
     }
 
-    fun redata(): String {
-        return data;
+    fun LoginUserName(): String { //로그인한 사용자 이름 넘겨주기
+        return Username;
     }
+
+    fun LoginUserId() : Int{ //로그인한 사용자 고유 id 넘겨주기
+        return Userid
+    }
+
+
 }

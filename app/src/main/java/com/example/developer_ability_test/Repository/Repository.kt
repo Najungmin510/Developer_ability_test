@@ -22,4 +22,9 @@ class Repository {
     suspend fun getLoginTodos(id: Int) : Response<List<TodosItem>>{
         return RetrofitInstance.TodoApi.getLoginTodos(id)
     }
+
+    //모든 게시글 가져오기
+    suspend fun getAllPosts() : Response<List<PostsItem>> {
+        return RetrofitInstance.PostsApi.getAllPosts()
+    }
 }

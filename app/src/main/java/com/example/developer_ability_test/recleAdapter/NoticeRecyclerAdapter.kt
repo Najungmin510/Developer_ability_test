@@ -18,62 +18,44 @@ import com.example.developer_ability_test.retrofit_DTO.UsersItem
 
 /*게시판 어댑터
 제목, 작성자 이름, 댓글 수 (Listsize 리턴하면됨) , 내용, xml 두개 사용... 을 해야할듯??????????????
-참고한게 R.layout 써서 헷갈릴까봐 똑같이 하긴 했는데, viewBinding으로 하는것에 익숙해지기 << 이게 더 효율적이고 편리함
-* retrofit2 사용*/
+*/
 
-class NoticeRecyclerAdapter(val context : Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
-
+class NoticeRecyclerAdapter : RecyclerView.Adapter<NoticeRecyclerAdapter.PostViewHolder>() {
     private var List = emptyList<PostsItem>()
+    class PostViewHolder(val binding: CustomNoticeBinding) : RecyclerView.ViewHolder(binding.root)
 
-    lateinit var UserInform : Login_MainActivity
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val view : View?
-        return when(viewType){
-            NoLogin_Notice_type -> { //로그인 한 사용자가 작성한 글이 아니라면
-                view = LayoutInflater.from(parent.context).inflate(R.layout.custom_notice,
-                parent,
-                false)
-                NoticeRecyclerAdapter_no_Login(view)
-            }
-
-            else -> { // 로그인 한 사용자가 작성한 글이라면, xml변경 (구성은 똑같은데 이름만 다른거임, 클릭 시 수정 삭제 가능하게 하려고
-                view = LayoutInflater.from(parent.context).inflate(R.layout.custom_notice_login,
-                parent,
-                false)
-                NoticeRecyclerAdapter_Login(view)
-            }
-        }
+    //새로운 뷰 홀더를 생성할 xml 지정 (재사용할 뷰가 없을 때 생성됨)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
+        val binding = CustomNoticeBinding.inflate(LayoutInflater.from(parent.context),parent, false)
+        return PostViewHolder(binding)
     }
 
-    override fun getItemCount(): Int { //리스트 크기
-       return List.size
-    }
-
-    override fun getItemViewType(position: Int): Int {
-        return List[position].type
-    }
-
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        when(List[position].type){
-            NoLogin_Notice_type -> {
-                (holder as NoticeRecyclerAdapter_no_Login).bind(List[position])
-
-            }
-        }
-    }
-
-    inner class NoticeRecyclerAdapter_no_Login(view : View) : RecyclerView.ViewHolder(view){
-
-        fun bind(item: PostsItem) {
-
-        }
-    }
-
-    inner class  NoticeRecyclerAdapter_Login(view : View) : RecyclerView.ViewHolder(view){
+    //뷰 홀더에 데이터 바인딩 해주기, contents를 바꿔주는 메서드
+    override fun onBindViewHolder(holder: PostViewHolder, position: Int) { //데이터 지정
+        holder.binding.noticeTitle.text = List[position].title //제목
+        holder.binding.noticeContent.text = List[position].body //내용
+        holder.binding.noticeWriter.text =
 
     }
 
 
+    //뷰 홀더 개수 리턴
+    override fun getItemCount(): Int {
+        return List.size
+    }
+
+    //데이터 변겅 or 추가 시에 리스트 재할당(새로고침)
+    @SuppressLint("NotifyDataSetChanged")
+    fun setData(body : List<PostsItem>){
+        List = body
+        notifyDataSetChanged()
+    }
+
+    //index == id, 유저는 총 10명, 처음 인덱스 0이라서 그냥 NoUser라고 값 줌
+    fun userName(args:Array<String>){
+        var UserName = arrayOf("NoUser","Bret", "Antonette","Samantha","Karianne","Kamren",
+        "Leopoldo_Corkery", "Elwyn.Skiles", "Maxime_Nienow", "Delphine", "Moriah.Stanton")
+    }
 
 }
 

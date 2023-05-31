@@ -27,6 +27,13 @@ class MainViewModel (private val repository: Repository) : ViewModel() {
         }
     }
 
+    fun getAllPosts(){
+        viewModelScope.launch {
+            val response = repository.getAllPosts()
+            NoticeDataResponse.value =response
+        }
+    }
+
     fun getLoginPosts(id : Int){ //로그인한 유저의 게시글 가져오기
         viewModelScope.launch {
             val response = repository.getLoginPosts(id)
