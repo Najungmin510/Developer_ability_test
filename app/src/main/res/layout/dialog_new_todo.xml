@@ -6,20 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="250dp">
 
-    <ImageView
-        android:id="@+id/NewTodoDialog"
-        android:layout_width="wrap_content"
-        android:layout_height="250dp"
-        android:layout_gravity="bottom"
-        android:layout_weight="1"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/dialog_background2" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
@@ -29,7 +15,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/NewTodoDialog"
+
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.86">
 
         <EditText
@@ -92,7 +79,10 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:fontFamily="@font/applesdgothicneo_b"
+        android:text="할일 추가하기"
+        android:textSize="17dp"
+        android:textColor="#0B203E"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toStartOf="@+id/btn_newTodoCancle"
         app:layout_constraintHorizontal_bias="0.573"

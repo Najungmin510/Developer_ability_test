@@ -2,6 +2,7 @@ package com.example.developer_ability_test.recleAdapter
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,8 +10,8 @@ import android.widget.BaseAdapter
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.developer_ability_test.R
-import com.example.developer_ability_test.ViewModel.NoLogin_Notice_type
 import com.example.developer_ability_test.code.Login_MainActivity
+import com.example.developer_ability_test.code.btm_navigation
 import com.example.developer_ability_test.databinding.CustomNoticeBinding
 import com.example.developer_ability_test.retrofit_DTO.Posts
 import com.example.developer_ability_test.retrofit_DTO.PostsItem
@@ -21,6 +22,7 @@ import com.example.developer_ability_test.retrofit_DTO.UsersItem
 */
 
 class NoticeRecyclerAdapter : RecyclerView.Adapter<NoticeRecyclerAdapter.PostViewHolder>() {
+
     private var List = emptyList<PostsItem>()
     class PostViewHolder(val binding: CustomNoticeBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -32,9 +34,17 @@ class NoticeRecyclerAdapter : RecyclerView.Adapter<NoticeRecyclerAdapter.PostVie
 
     //뷰 홀더에 데이터 바인딩 해주기, contents를 바꿔주는 메서드
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) { //데이터 지정
+        //index == id, 유저는 총 10명, 처음 인덱스 0이라서 그냥 NoUser라고 값 줌
+        var UserName = arrayOf("NoUser","Bret", "Antonette","Samantha","Karianne","Kamren",
+                "Leopoldo_Corkery", "Elwyn.Skiles", "Maxime_Nienow", "Delphine", "Moriah.Stanton")
+
+        var NameID = List[position].userId //사용자 고유 아이디 가져오고
+        Log.d("게시글 사용자 고유아이디 확인 / 어댑터", NameID.toString())
+
         holder.binding.noticeTitle.text = List[position].title //제목
         holder.binding.noticeContent.text = List[position].body //내용
-        holder.binding.noticeWriter.text =
+        holder.binding.noticeWriter.text = UserName[NameID] //유저 고유 아이디
+
 
     }
 
@@ -49,12 +59,6 @@ class NoticeRecyclerAdapter : RecyclerView.Adapter<NoticeRecyclerAdapter.PostVie
     fun setData(body : List<PostsItem>){
         List = body
         notifyDataSetChanged()
-    }
-
-    //index == id, 유저는 총 10명, 처음 인덱스 0이라서 그냥 NoUser라고 값 줌
-    fun userName(args:Array<String>){
-        var UserName = arrayOf("NoUser","Bret", "Antonette","Samantha","Karianne","Kamren",
-        "Leopoldo_Corkery", "Elwyn.Skiles", "Maxime_Nienow", "Delphine", "Moriah.Stanton")
     }
 
 }

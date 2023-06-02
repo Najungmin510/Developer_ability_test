@@ -72,5 +72,4 @@ class notice_fragment :Fragment() {
         mBinding = null; //사용하지 않는다면 이 뷰 메모리 날려버리기
         super.onDestroyView()
     }
-
 }

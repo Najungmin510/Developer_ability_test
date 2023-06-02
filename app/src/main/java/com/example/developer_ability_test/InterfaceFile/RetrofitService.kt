@@ -5,9 +5,11 @@ import com.example.developer_ability_test.retrofit_DTO.PostsItem
 import com.example.developer_ability_test.retrofit_DTO.TodosItem
 import com.example.developer_ability_test.retrofit_DTO.Users
 import com.example.developer_ability_test.retrofit_DTO.UsersItem
+import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.Headers
 import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -35,11 +37,10 @@ interface RetrofitService {
     둘 다 userid로 구분되기 때문, username은 혹시 몰라서 데이터 받아둔거임 쓸 곳 있을까봐
     */
 
-    /*
     @POST("/posts")
-    suspend fun uploadPosts(@Body Posts : PostsItem) : Response<PostsItem>
+    suspend fun uploadPosts(@Body Posts : PostsItem) : Call<PostsItem>
 
     @POST("/todos")
-    suspend fun uploadTodos(@Body Todos : TodosItem) : Response<TodosItem>
-*/
+    suspend fun uploadTodos(@Body Todos : TodosItem) : Call<TodosItem>
+
 }
