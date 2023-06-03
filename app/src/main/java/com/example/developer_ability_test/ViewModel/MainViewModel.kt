@@ -20,6 +20,7 @@ class MainViewModel (private val repository: Repository) : ViewModel() {
 
     val TodoDataLoginUsersResponse : MutableLiveData<Response<List<TodosItem>>> = MutableLiveData() //로그인 유저의 todolist
 
+    val TodoDataUpload : MutableLiveData<Response<TodosItem>> = MutableLiveData()
     fun getLogin(name : String){ //로그인 정보 가져오기
         viewModelScope.launch {
             val response = repository.getLogin(name)
@@ -45,6 +46,14 @@ class MainViewModel (private val repository: Repository) : ViewModel() {
         viewModelScope.launch {
             val response = repository.getLoginTodos(id)
             TodoDataLoginUsersResponse.value = response
+        }
+    }
+
+    fun uploadTodos(todosItem: TodosItem) { //할일 리스트 업데이트
+        viewModelScope.launch {
+            val response = repository.uploadTodos(todosItem)
+            TodoDataUpload.value = response
+
         }
     }
 

@@ -6,9 +6,15 @@ import android.view.View
 import android.view.View.OnClickListener
 import android.view.ViewGroup
 import android.widget.EditText
+import androidx.lifecycle.ViewModelProvider
 import com.example.developer_ability_test.R
+import com.example.developer_ability_test.Repository.Repository
+import com.example.developer_ability_test.Retrofit2.RetrofitInstance
+import com.example.developer_ability_test.ViewModel.MainViewModel
+import com.example.developer_ability_test.ViewModel.MainViewModelFactory
 import com.example.developer_ability_test.databinding.CustomTodoBinding
 import com.example.developer_ability_test.databinding.DialogNewTodoBinding
+import com.example.developer_ability_test.retrofit_DTO.PostsItem
 import com.example.developer_ability_test.retrofit_DTO.TodosItem
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
@@ -27,13 +33,16 @@ View.OnClickListener{
         binding = CustomTodoBinding.inflate(layoutInflater)
         val newList = binding.todoTitle.toString() //사용자가 입력한 할일 가져와서
 
-        uploadTodos(newList) //Post
+        upLoad(newList)
+
 
         return inflater.inflate(R.layout.custom_todo, container, false)
     }
 
-    private fun uploadTodos(np: String) { //사용자가 입력한 새로운 할일을 추가 | 순서 =>  완료, 아이디(글순서), 내용, 유저아이디(사용자구분)
-        TodosItem(false, userid, np, id) //순서대로 완료여부, 고유아이디, 작성내용,
+    private fun upLoad(np: String) { //사용자가 입력한 새로운 할일을 추가 | 순서 =>  완료, 아이디(글순서), 내용, 유저아이디(사용자구분)
+
+        val addData = TodosItem(false, 0, np, userid)
+
     }
 
     interface OnClickListener{

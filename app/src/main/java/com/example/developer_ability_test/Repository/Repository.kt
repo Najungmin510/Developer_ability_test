@@ -27,4 +27,8 @@ class Repository {
     suspend fun getAllPosts() : Response<List<PostsItem>> {
         return RetrofitInstance.PostsApi.getAllPosts()
     }
+
+    suspend fun uploadTodos(todositem : TodosItem) : Response<TodosItem> {
+        return RetrofitInstance.TodoApi.uploadTodos(todositem)
+    }
 }

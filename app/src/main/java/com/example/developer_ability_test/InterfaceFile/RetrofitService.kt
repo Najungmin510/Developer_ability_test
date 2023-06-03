@@ -8,6 +8,8 @@ import com.example.developer_ability_test.retrofit_DTO.UsersItem
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.POST
@@ -37,10 +39,20 @@ interface RetrofitService {
     둘 다 userid로 구분되기 때문, username은 혹시 몰라서 데이터 받아둔거임 쓸 곳 있을까봐
     */
 
+    @FormUrlEncoded
     @POST("/posts")
-    suspend fun uploadPosts(@Body Posts : PostsItem) : Call<PostsItem>
+    suspend fun uploadPosts(
+        @Field("id") id : Int,
+        @Field("userId") userId : Int,
+        @Field("title") title : String,
+        @Field("body") body : String
+
+    ) : Call<PostsItem>
+
 
     @POST("/todos")
-    suspend fun uploadTodos(@Body Todos : TodosItem) : Call<TodosItem>
+    suspend fun uploadTodos(
+        @Body todosItem : TodosItem
+    ) : Response<TodosItem>
 
 }
