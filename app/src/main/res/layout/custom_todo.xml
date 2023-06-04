@@ -39,12 +39,8 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/ic_more_vert" />
 
-
         </LinearLayout>
 
-
-
     </androidx.cardview.widget.CardView>
-
 
 </LinearLayout>

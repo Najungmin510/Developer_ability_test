@@ -8,15 +8,15 @@ import androidx.navigation.ui.NavigationUI
 import com.example.developer_ability_test.R
 import com.example.developer_ability_test.databinding.ActivityBtmNavigationBinding
 
-class btm_navigation : AppCompatActivity() {
+class btm_navigation : AppCompatActivity(){
 
     private lateinit var mBinding : ActivityBtmNavigationBinding //바텀 네비게이션과 연결
+
     var Username = "" //로그인한 사용자의 이름
     var Userid = 0 //로그인한 사용자의 id
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         mBinding = ActivityBtmNavigationBinding.inflate(layoutInflater)
 
         setContentView(mBinding.root)
@@ -35,7 +35,6 @@ class btm_navigation : AppCompatActivity() {
 
         Log.d("myidcheck",Username)
         Log.d("myidcheck", Userid.toString()) //데이터 잘 넘어오는거 확인 완료
-
 
     }
 

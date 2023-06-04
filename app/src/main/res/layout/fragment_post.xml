@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F6F7F8"
-    tools:context="com.example.developer_ability_test.fragments.notice_fragment">
+    tools:context="com.example.developer_ability_test.fragments.post_fragment">
 
     <ImageView
         android:id="@+id/imageView"

@@ -25,6 +25,7 @@ interface RetrofitService {
     @GET("/posts")
     suspend fun getAllPosts() : Response<List<PostsItem>>//게시글 데이터 다 가져오기
 
+
     @GET("/posts")
     suspend fun getLoginPosts( //로그인 한 사용자의 userid는 따로 가져와주기(삭제, 수정 기능때문에)
         @Query("userid") userId : Int

@@ -11,7 +11,5 @@ data class PostsItem(
     @SerializedName("title")
     val title: String,
     @SerializedName("body")
-    val body: String,
-
-    val type : Int //로그인 한 유저의 게시글, 로그인 하지 않은 유저의 게시글을 구분하기 위해서 type 추가
+    val body: String
 )
