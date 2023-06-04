@@ -57,21 +57,40 @@ Kurtis Weissnat, Maxime_Nienow, Glenna Reichert, Clementina DuBuque<br><br>
 > Retrofit2   
 > CookieJar
 
-## 4. 참고 사이트
-> Retrofit & JsonplaceHolder 참고 사이트      
-> https://velog.io/@leeyjwinter/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-Retrofit-%EC%B4%88%EA%B8%B0%EC%84%A4%EC%A0%95%EA%B3%BC-%EC%8B%A4%ED%96%89   
-> https://codingpracticing.tistory.com/223   
-> https://jsonplaceholder.typicode.com/   
-> https://zzandoli.tistory.com/48   
-> http://devflow.github.io/retrofit-kr/   
-> https://jslee-tech.tistory.com/18   
+## 4. 참고 사이트<br>
+> Retrofit & JsonplaceHolder 참고 사이트<br> 
+> [[안드로이드 Retrofit 1] - 초기설정과 api @GET](https://velog.io/@leeyjwinter/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-Retrofit-%EC%B4%88%EA%B8%B0%EC%84%A4%EC%A0%95%EA%B3%BC-%EC%8B%A4%ED%96%89)<br>
+> [안드로이드 - Json을 Kotlin Data 클래스로](https://codingpracticing.tistory.com/223)<br>
+> [jsonplaceHolder 공식사이트](https://jsonplaceholder.typicode.com/)<br>
+> [[안드로이드 개인공부] Retrofit에 대해서 단계별로 공부해보자!](https://zzandoli.tistory.com/48)<br>
+> [Retrofit 깃허브](http://devflow.github.io/retrofit-kr/)<br>
+> [Retrofit 사용하기](https://jslee-tech.tistory.com/18)<br>
+> [[Android] Retrofit 사용하여 서버와 http 통신하기 - (3) 통신결과 리싸이클러뷰에 연결하기](https://hanyeop.tistory.com/202)<br>
+> [Retrofit - Send a simple POST Request | Android Studio Tutorial](https://www.youtube.com/watch?v=ok697I1j1aE&list=PLSrm9z4zp4mF1Ssdfuocy2XH5Bw4wLLNw&index=4)
 
 > material3 error 해결 참고 사이트   
-> https://stackoverflow.com/questions/53476115/error-illegalargumentexception-the-style-on-this-component-requires-your-app   
-> https://enant.tistory.com/7   
+> [Error : IllegalArgumentException: The style on this component requires your app theme to be Theme.MaterialComponents](https://stackoverflow.com/questions/53476115/error-illegalargumentexception-the-style-on-this-component-requires-your-app)<br>
+> [안드로이드 스튜디오에서 레이아웃 프리뷰가 보이지 않는 문제 해결법](https://enant.tistory.com/7)<br>
 
-> 로그인 세션 유지 방법 참고 사이트   
-> https://gun0912.tistory.com/50   
-> https://easy-coding.tistory.com/54   
-> https://github.com/square/okhttp/tree/master   
-> https://android-arsenal.com/details/1/8000   
+> 로그인 세션 유지 방법 참고 사이트<br>
+> [[안드로이드/Android]Retrofit에서 Interceptor를 이용해 쿠키/세션 유지하는 방법](https://gun0912.tistory.com/50)<br>
+> [Android 쿠키 동기화(retrofit2, webview)](https://easy-coding.tistory.com/54)<br>
+> [okhttp 깃허브](https://github.com/square/okhttp/tree/master)<br>
+> [Android Cookie Store](https://android-arsenal.com/details/1/8000)<br>
+
+> 다이얼로그 구현 방법 참고 사이트<br>
+> [[Android] 하단 다이얼로그 BottomSheetDialog 구현하기](https://win-record.tistory.com/41)<br>
+> [[Anroid Dialog] 2. Compose AlertDialog를 이용해 다이얼로그 만들기](https://kotlinworld.com/236)<br>
+
+> Multi View 구현 방법 참고 사이트<br>
+>[[Android/Kotlin] 멀티뷰 타입 RecyclerView 구현하기](https://yunaaaas.tistory.com/61)<br>
+
+> 바텀 네비게이션 구현 방법 참고 사이트 <br>
+> [개발하는 정대리 - 취준생을 위한 안드로이드 앱만들기 바텀네비게이션 뷰, 네비게이션 AAC - Android Kotlin jetpack Tutorial (2021)](https://www.youtube.com/watch?v=4CrNKxoN_Dg)<br>
+
+> 안드로이드 공식 사이트<br>
+> [프래그먼트와 통신](https://developer.android.com/guide/fragments/communicate?hl=ko)<br>
+> [대화상자](https://developer.android.com/guide/topics/ui/dialogs?hl=ko)<br>
+> [Kotlin 문법](https://developer.android.com/codelabs/basic-android-kotlin-compose-functions?hl=ko&continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-compose-unit-1-pathway-1%3Fhl%3Dko%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-compose-functions#6)<br>
+> [다른 프래그먼트와 통신](https://developer.android.com/training/basics/fragments/communicating?hl=ko)<br>
+> [뷰바인딩](https://developer.android.com/topic/libraries/view-binding?hl=ko)<br>
